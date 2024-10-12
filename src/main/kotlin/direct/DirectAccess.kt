@@ -1,8 +1,6 @@
 package direct
 
-class DirectAccessTable<V>(keys: Int) {
-
-    class Slot<V>(val key: Int, val value: V)
+class DirectAccess<V>(keys: Int) {
 
     private val table: Array<Slot<V>?> = arrayOfNulls(keys)
 
@@ -18,4 +16,16 @@ class DirectAccessTable<V>(keys: Int) {
         table[slot.key] = null
     }
 
+    fun findMax(): Slot<V>? {
+        for (i in table.size - 1 downTo 0) {
+            if (table[i] != null) {
+                return table[i]
+            }
+        }
+        return null
+    }
+
 }
+
+
+class Slot<V>(val key: Int, val value: V)
