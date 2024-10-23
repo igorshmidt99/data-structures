@@ -15,9 +15,9 @@ class DirectAccessibleTableTest {
 
     @Test
     fun findMaxUpperBound() {
-        table.insert(DirectAccess.Slot(2, "Some val"))
-        table.insert(DirectAccess.Slot(5, "Some val"))
-        table.insert(DirectAccess.Slot(7, "Some val"))
+        table.insert(Slot(2, "Some val"))
+        table.insert(Slot(5, "Some val"))
+        table.insert(Slot(7, "Some val"))
 
         val actual = getKey()
 
@@ -26,7 +26,7 @@ class DirectAccessibleTableTest {
 
     @Test
     fun findMaxLowerBound() {
-        table.insert(DirectAccess.Slot(0, "Some val"))
+        table.insert(Slot(0, "Some val"))
 
         val key = getKey()
 

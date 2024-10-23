@@ -27,5 +27,4 @@ class DirectAccess<V>(keys: Int) {
 
 }
 
-
 class Slot<V>(val key: Int, val value: V)
